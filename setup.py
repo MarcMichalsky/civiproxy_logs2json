@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="civiproxy_logs2json",
-    version="1.0.0",
+    version="1.0.1",
     author="Marc Michalsky",
     author_email="michalsky@forumZFD.de",
     packages=["civiproxy_logs2json"],
@@ -14,8 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/MarcMichalsky/civiproxy_logs2json",
     license='MIT',
-    python_requires='>=3.8',
-    install_requires=[],
+    python_requires='>=3.5',
     entry_points={
         'console_scripts': [
             'cpl2j = civiproxy_logs2json.__main__:main',
