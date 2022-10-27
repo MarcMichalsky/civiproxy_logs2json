@@ -4,7 +4,7 @@ Translate a [CiviProxy](https://github.com/systopia/CiviProxy) logfile into JSON
 
 ## Installation
 ```bash
-pyton3 -m pip install civiproxy_logs2json
+python3 -m pip install civiproxy_logs2json --user
 ```
 
 ## Example Usage
