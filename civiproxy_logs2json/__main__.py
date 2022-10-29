@@ -11,13 +11,14 @@ CLOSING_LINE_RE = r"^\)$"
 # Setup argparse
 argparser = argparse.ArgumentParser(
     description='Translate a CiviProxy logfile into JSON format. ')
-argparser.add_argument('logfile',
+argparser.add_argument('-f',
+                       '--logfile',
                        help='CiviProxy logfile',
                        type=argparse.FileType('r', encoding='UTF-8'),
                        default=(None if sys.stdin.isatty() else sys.stdin))
 argparser.add_argument('-i',
                        '--indent',
-                       help='Print JSON with indent',
+                       help='number of spaces to indent JSON output',
                        type=int,
                        default=4)
 
