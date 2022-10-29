@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="civiproxy_logs2json",
-    version="1.0.2",
+    version="1.0.3",
     author="Marc Michalsky",
     author_email="michalsky@forumZFD.de",
     packages=find_packages("civiproxy_logs2json", exclude=["test"]),
