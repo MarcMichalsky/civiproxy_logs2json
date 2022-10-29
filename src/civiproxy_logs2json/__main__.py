@@ -4,21 +4,18 @@ import re
 import sys
 from typing import TextIO
 
-REQUEST_LINE_RE = r"^REQUEST FROM (?P<source>(\d{1,3}\.){3}\d{1,3}) ON (?P<date>\d\d\d\d-\d\d-\d\d) (?P<time>\d\d:\d\d:\d\d) -- Array$"
-VALUES_LINE_RE = r"^\s{4}\[(?P<key>.*)] => (?P<value>.*)$"
-CLOSING_LINE_RE = r"^\)$"
 
 # Setup argparse
 argparser = argparse.ArgumentParser(
-    description='Translate a CiviProxy logfile into JSON format. ')
-argparser.add_argument('-f',
-                       '--logfile',
-                       help='CiviProxy logfile',
-                       type=argparse.FileType('r', encoding='UTF-8'),
+    description="Translate a CiviProxy logfile into JSON format. ")
+argparser.add_argument("-f",
+                       "--logfile",
+                       help="CiviProxy logfile",
+                       type=argparse.FileType("r", encoding="UTF-8"),
                        default=(None if sys.stdin.isatty() else sys.stdin))
-argparser.add_argument('-i',
-                       '--indent',
-                       help='number of spaces to indent JSON output',
+argparser.add_argument("-i",
+                       "--indent",
+                       help="number of spaces to indent JSON output",
                        type=int,
                        default=4)
 
@@ -28,7 +25,7 @@ def main():
 
     # Print info if no logfile is specified or passed via stdin
     if not args.logfile:
-        print('Please specify a path to a CiviProxy logfile')
+        print("Please specify a path to a CiviProxy logfile")
         sys.exit()
 
     # Parse logfile and print it to console
@@ -59,5 +56,5 @@ def translate_logfile(logfile: TextIO) -> list:
     return json_
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
