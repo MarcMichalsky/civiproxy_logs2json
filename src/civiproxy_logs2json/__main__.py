@@ -4,6 +4,8 @@ import re
 import sys
 from typing import TextIO
 
+from . import REQUEST_LINE_RE, VALUES_LINE_RE, CLOSING_LINE_RE
+
 
 # Setup argparse
 argparser = argparse.ArgumentParser(

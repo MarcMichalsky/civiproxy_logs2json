@@ -1,5 +1,4 @@
 from importlib import resources
-from .__main__ import main, translate_logfile
 try:
     import tomllib
 except ModuleNotFoundError:
