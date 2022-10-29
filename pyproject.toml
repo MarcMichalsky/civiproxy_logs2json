@@ -33,13 +33,12 @@ version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "🔖 bump version {old_version} -> {new_version}"
 commit = true
 tag = true
-push = true
+push = false
 
 [tool.bumpver.file_patterns]
 "pyproject.toml" = [
-    'current_version = "{version}"',
+    '"{version}"',
 ]
 "src/civiproxy_logs2json/__init__.py" = [
     "{version}"
 ]
-
