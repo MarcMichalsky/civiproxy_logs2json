@@ -1,14 +1,14 @@
-import setuptools
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     description = fh.read()
 
-setuptools.setup(
+setup(
     name="civiproxy_logs2json",
     version="1.0.2",
     author="Marc Michalsky",
     author_email="michalsky@forumZFD.de",
-    packages=["civiproxy_logs2json"],
+    packages=find_packages("civiproxy_logs2json", exclude=["test"]),
     description="Translate a CiviProxy logfile into JSON format.",
     long_description=description,
     long_description_content_type="text/markdown",
