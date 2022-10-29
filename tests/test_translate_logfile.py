@@ -1,6 +1,6 @@
 import os
 import json
-from civiproxy_logs2json import translate_logfile
+from src.civiproxy_logs2json import translate_logfile
 
 
 def test_translate_logfile():
