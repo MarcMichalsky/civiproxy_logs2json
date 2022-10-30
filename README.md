@@ -9,7 +9,7 @@ python3 -m pip install civiproxy_logs2json --user
 
 ## Example Usage
 
-Pass logfile as positional argument:
+Pass logfile as option:
 ```bash
 cpl2j -f /var/www/proxy_logs/proxy.log
 ```
