@@ -11,7 +11,7 @@ python3 -m pip install civiproxy_logs2json --user
 
 Pass logfile as positional argument:
 ```bash
-cpl2j /var/www/proxy_logs/proxy.log
+cpl2j -f /var/www/proxy_logs/proxy.log
 ```
 
 Pipe logfile into program:
@@ -28,5 +28,5 @@ cat proxy.log | cpl2j -s 2
 Use [VisiData](https://github.com/saulpw/visidata) to explore the data in a very comfortable way:
 /var/www/proxy_logs/proxy.log
 ```bash
-cpl2j /var/www/proxy_logs/proxy.log | vd -f json
+cpl2j -f /var/www/proxy_logs/proxy.log | vd -f json
 ```
