@@ -24,9 +24,14 @@ Set JSON indentation to two spaces:
 cat proxy.log | cpl2j -s 2 
 ```
 
+Output JSON lines:
+```bash
+cpl2j -l -f /var/www/proxy_logs/proxy.log
+```
+
 ### Tip
 Use [VisiData](https://github.com/saulpw/visidata) to explore the data in a very comfortable way:
 /var/www/proxy_logs/proxy.log
 ```bash
-cpl2j -f /var/www/proxy_logs/proxy.log | vd -f json
+cpl2j -l -f /var/www/proxy_logs/proxy.log | vd -f jsonl
 ```
